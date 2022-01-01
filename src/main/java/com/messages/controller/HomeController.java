@@ -20,7 +20,7 @@ public class HomeController {
         String user = (String)request.getSession().getAttribute("user");
         String mpage = request.getParameter("mymsgpage");
         String apage = request.getParameter("allmsgpage");
-        System.out.println("User logged on - "+user);
+        System.out.println("User logged on --- "+user);
         if(user != null){
             return userService.redirectHomepage(user, model, mpage == null ? 1 : Integer.parseInt(mpage), apage == null ? 1 : Integer.parseInt(apage));
         } else {
